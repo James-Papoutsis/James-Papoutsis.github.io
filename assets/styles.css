@@ -381,11 +381,6 @@ footer {
     align-items: flex-start;
 }
 
-.resume-para {
-    width: 60%;
-    margin-bottom: 30px;
-}
-
 .resume-section, .skills-section {
     margin-bottom: -10px;
 }
