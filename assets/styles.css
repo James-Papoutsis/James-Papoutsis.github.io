@@ -554,6 +554,10 @@ strong {
         height: 300px;
         width: 300px;
     }
+    #type-it {
+        min-height: 3em; 
+        line-height: 1.5em;
+    }
     #hide-on-large {
         display: block;
     }
@@ -561,7 +565,7 @@ strong {
 
     /* CONTACT PAGE START */
     .contact-section {
-        padding: 50px 15px 15px 15px;
+        padding: 150px 15px 15px 15px;
     }
     .contact-form {
         padding: 25px;
