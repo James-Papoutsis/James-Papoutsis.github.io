@@ -111,6 +111,7 @@ a:hover {
     background: var(--primary-color);
     color: #fff;
     box-shadow: 6px 6px 0 -1px var(--dark-color);
+    margin: auto 0;
 }
 
 .colored-btn:hover {
