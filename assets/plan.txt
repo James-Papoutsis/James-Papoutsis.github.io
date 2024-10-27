@@ -1,0 +1,32 @@
+Here’s a summary for easy reference while creating your webpages:
+
+### 1. **Homepage (index.html)**
+   - Introduce yourself with a header (name and title) and an "About Me" section.
+   - Use a Bootstrap navigation bar to link to other pages.
+   - Social media icons in the footer (LinkedIn, GitHub).
+
+### 2. **Resume (resume.html)**
+   - Include sections for Education, Experience (work at Bailey's, internships), and Skills (coding, accounting).
+   - Use a Bootstrap grid for responsive layout.
+
+### 3. **Portfolio (portfolio.html)**
+   - Display your coding projects and extracurriculars (Debating Club, AWS Cloud Club).
+   - Use Bootstrap cards or grid to present content.
+
+### 4. **Contact (contact.html)**
+   - Create a form (name, email, message) with JavaScript validation.
+   - Embed a Google Map of your university or business.
+
+### 5. **CSS (styles.css)**
+   - Use the following selectors:
+     1. Tag selector (e.g., `body`).
+     2. Class selector (e.g., `.navbar-custom`).
+     3. ID selector (e.g., `#about-section`).
+     4. Child selector (e.g., `nav ul li`).
+     5. Attribute selector (e.g., `input[type="submit"]`).
+   - Properties: `font-size`, `margin`, `background-color`, `padding`, `text-align`.
+
+### 6. **JavaScript**
+   - Add interactivity (e.g., toggle content visibility on button click, form validation).
+
+This outline covers all the requirements from the problem set and helps you stay organized!
