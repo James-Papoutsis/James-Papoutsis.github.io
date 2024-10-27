@@ -383,7 +383,7 @@ footer {
 }
 
 #resume-btn {
-    align-items: flex-start;
+    margin-left: -25%;
 }
 
 .resume-section, .skills-section {
