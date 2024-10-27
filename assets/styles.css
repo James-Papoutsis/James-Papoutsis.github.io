@@ -539,8 +539,6 @@ strong {
     .home-section .home-intro h1 {
         margin: 0 0 25px;
         font-size: 45px;
-        min-height: 120px; 
-        line-height: 60px;
     }
     .home-section .home-intro h6 {
         margin: 0 0 20px;
@@ -556,6 +554,10 @@ strong {
         height: 300px;
         width: 300px;
     }
+    .type-it {
+        min-height: 120px; 
+        line-height: 60px;
+    }
     #hide-on-large {
         display: block;
     }
@@ -563,7 +565,7 @@ strong {
 
     /* CONTACT PAGE START */
     .contact-section {
-        padding: 200px 15px 15px 15px;
+        padding: 250px 15px 15px 15px;
     }
     .contact-form {
         padding: 25px;
@@ -586,6 +588,7 @@ strong {
         text-align: center;
         margin: 0px 25%;
         margin-bottom: 30px;
+        white-space: nowrap;
     }
     .skills-container {
         display: block;
