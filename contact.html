@@ -68,34 +68,38 @@
                             <div class="contact-form">
                                 <h2 class="text-dark">Get in touch</h2>
                                 <p class="lead">If you'd like to work on a project together or have anything you want to say, don't hesitate to reach out to me!</p>
-                                <form action="#">
+                                <form action="https://formsubmit.co/jamespapoutsis8@gmail.com" method="POST">
                                     <div class="row gy-4 gx-3">
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label class="form-label">Name</label>
-                                                <input type="text" class="form-control" name="name">
+                                                <input type="text" class="form-control" name="name" placeholder="Eg. James Papoutsis" required>
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label class="form-label">Email</label>
-                                                <input type="email" class="form-control" name="email">
+                                                <input type="email" class="form-control" name="email" placeholder="Eg. jamespapoutsis8@gmail.com" required>
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label class="form-label">Subject</label>
-                                                <input type="text" class="form-control" name="subject">
+                                                <input type="text" class="form-control" name="subject" placeholder="Eg. I would love to work on a project together!" required>
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label class="form-label">Message</label>
-                                                <textarea name="message" rows="3" class="form-control"></textarea>
+                                                <textarea name="message" rows="3" class="form-control" placeholder="Eg. I am currently working on a project and would like to collaborate..." required></textarea>
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <button class="colored-btn" type="submit">Send Message</button>
+                                        </div>
+                                        <div>
+                                            <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html">
+                                            <input type="hidden" name="_captcha" value="false">
                                         </div>
                                     </div>
                                 </form>
