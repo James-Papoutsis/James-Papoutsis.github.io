@@ -144,7 +144,7 @@ main {
 .home-section .container {
     position: relative;
     z-index: 1;
-    margin-top: -20px;
+    margin-top: -50px;
 }
 
 .home-section .home-intro h6 {
@@ -375,15 +375,18 @@ footer {
 }
 
 .resume-content {
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
     padding: 30px 50px;
     gap: 20px;
-    align-items: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
 }
 
-#resume-btn {
-    margin-left: -25%;
+.resume-para {
+    flex: 1; 
+    margin: 0; 
 }
 
 .resume-section, .skills-section {
