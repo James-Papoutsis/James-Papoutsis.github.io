@@ -539,6 +539,8 @@ strong {
     .home-section .home-intro h1 {
         margin: 0;
         font-size: 45px;
+        min-height: 150px; 
+        line-height: 60px;
     }
     .home-section .home-intro h6 {
         margin: 0 0 20px;
@@ -553,10 +555,6 @@ strong {
     .home-image img {
         height: 300px;
         width: 300px;
-    }
-    .type-it {
-        min-height: 120px; 
-        line-height: 60px;
     }
     #hide-on-large {
         display: block;
