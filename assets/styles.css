@@ -692,27 +692,26 @@ strong {
     padding-bottom: 2rem;
 }
 
-/* Masonry via CSS multi column: tiles stack under whichever column is shortest,
-   so tall portrait photos and short landscape ones sit together without gaps. */
+/* Default, for sections with only one to three photos: a centred row of tiles. */
 .gallery-grid {
-    columns: 300px 3;
-    column-gap: 1.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.75rem;
     max-width: 1100px;
     margin: 2rem auto 0 auto;
     padding: 0 1.5rem;
 }
 
 .gallery-item {
-    display: inline-block;
     width: 100%;
-    margin: 0 0 1.75rem 0;
+    max-width: 400px;
+    margin: 0;
     background: #ffffff;
     border: 2px solid var(--primary-color);
     box-shadow: 6px 6px 0 -1px var(--dark-color);
     overflow: hidden;
-    -webkit-column-break-inside: avoid;
-    page-break-inside: avoid;
-    break-inside: avoid;
 }
 
 .gallery-item img {
@@ -729,20 +728,41 @@ strong {
     background: #ffffff;
 }
 
+/* Four photos or more, such as the rowing section: masonry, so tall portrait
+   shots and short landscape ones interlock without leaving dead space. */
+.gallery-grid:has(.gallery-item:nth-child(4)) {
+    display: block;
+    columns: 300px 3;
+    column-gap: 1.75rem;
+}
+
+.gallery-grid:has(.gallery-item:nth-child(4)) .gallery-item {
+    display: inline-block;
+    width: 100%;
+    max-width: none;
+    margin: 0 0 1.75rem 0;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
 @media screen and (max-width: 900px) {
-    .gallery-grid {
+    .gallery-grid:has(.gallery-item:nth-child(4)) {
         columns: 260px 2;
     }
 }
 
 @media screen and (max-width: 600px) {
     .gallery-grid {
+        gap: 1.25rem;
+        padding: 0 1rem;
+    }
+    .gallery-grid:has(.gallery-item:nth-child(4)) {
         columns: 1;
         column-gap: 0;
         max-width: 340px;
-        padding: 0 1rem;
     }
-    .gallery-item {
+    .gallery-grid:has(.gallery-item:nth-child(4)) .gallery-item {
         margin-bottom: 1.25rem;
     }
 }
