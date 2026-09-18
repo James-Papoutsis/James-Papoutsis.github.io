@@ -694,7 +694,9 @@ strong {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 340px));
+    justify-content: center;
+    align-items: start;
     gap: 1.75rem;
     max-width: 1100px;
     margin: 2rem auto 0 auto;
@@ -712,8 +714,7 @@ strong {
 .gallery-item img {
     display: block;
     width: 100%;
-    height: 280px;
-    object-fit: cover;
+    height: auto;
 }
 
 .gallery-item figcaption {
@@ -726,11 +727,8 @@ strong {
 
 @media screen and (max-width: 600px) {
     .gallery-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 340px);
         gap: 1.25rem;
         padding: 0 1rem;
-    }
-    .gallery-item img {
-        height: 240px;
     }
 }
