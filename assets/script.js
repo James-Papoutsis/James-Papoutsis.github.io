@@ -13,7 +13,7 @@ $(document).ready(function() {
 
     // Typing animation
     new Typed('#type-it', {
-        strings: ['BAccSci Student', 'CompSci Nerd', 'Problem Solver', 'Lifelong Learner'],
+        strings: ['BAccSci Student', 'Future CA(SA)', 'Rower', 'Runner', 'Problem Solver', 'Lifelong Learner'],
         typeSpeed: 100,
         loop: true
     });

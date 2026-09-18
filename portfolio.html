@@ -26,13 +26,16 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse-toggle">
                         <ul class="navbar-nav mx-auto">
                             <li>
-                                <a href="/index.html" class="nav-link" id="active">Home & About Me</a>
+                                <a href="/index.html" class="nav-link">Home & About Me</a>
                             </li>
                             <li>
                                 <a href="/resume.html" class="nav-link">Resume & Skills</a>
                             </li>
                             <li>
-                                <a href="/portfolio.html" class="nav-link">Portfolio</a>
+                                <a href="/portfolio.html" class="nav-link" id="active">Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="/life.html" class="nav-link">Beyond the Desk</a>
                             </li>
                         </ul>
                     </div>
@@ -64,18 +67,233 @@
                     </div>
                     <h4 class="h4-heading">Welcome to my Portfolio!</h4>
                     <p class="portfolio-paragraph" id="into-portfolio-para">
-                        Here, you’ll find an overview of the projects I’ve worked on, showcasing my journey through various
-                        academic and personal endeavors. This page highlights my experience in Accounting Information Systems,
-                        Financial Accounting, and computer science, with a focus on sustainability, innovation, and digital
-                        transformation. Featured projects include my work on incorporating AI into business processes, such
-                        as the digitization of shipping and invoicing, as well as strategies for sustainable business models.
-                        Whether it’s collaborative school projects or individual work, each project reflects my passion for
-                        problem-solving and my commitment to building practical solutions. As you explore, you’ll gain
-                        insights into my skills, contributions, and the knowledge I’ve gained along the way.
+                        This page collects the work I am most willing to be judged on. Some of it is academic, some of it
+                        is software I built because I needed it to exist, and some of it is the unglamorous financial
+                        administration that comes with running a university sports club. It spans taxation, auditing,
+                        financial accounting and web development, and it is arranged with the most recent work first.
+                        Each entry says what the problem was, what I actually did, and what came out of it.
                     </p>
                 </section>
                 <br>
             </div>
+
+
+            <!--Ascent-->
+            <hr class="hr">
+            <section class="ascent-project">
+                <div class="dark-bg">
+                    <div class="title">
+                        <h2><span class="underline">Ascent</span></h2>
+                    </div>
+                    <div class="project-overview">
+                        <h4 class="h4-heading">Project Overview: A Personal Operating System</h4>
+                        <p class="portfolio-paragraph">
+                            Ascent is a single user web application I designed and built to run my academic and working
+                            life from one place. It is written in Next.js, backed by a Neon Postgres database and deployed
+                            on Vercel, and it installs as a progressive web app so that it behaves the same on my phone,
+                            my iPad and my laptop.
+                        </p>
+                        <ul class="portfolio-ul">
+                            <li>
+                                <strong>Work and invoicing:</strong> hours captured per employer and per student, outstanding
+                                totals for each pay period, and invoice PDFs generated on demand.
+                            </li>
+                            <li>
+                                <strong>Marks:</strong> weighted tracking across my four modules, including the separate final
+                                examination hurdle, with a progress report export.
+                            </li>
+                            <li>
+                                <strong>Focus:</strong> a pomodoro timer that logs every session to the database and survives
+                                navigation and app closure, with streaks derived from the session log.
+                            </li>
+                            <li>
+                                <strong>Tasks:</strong> deadline tracking with push a day and push a week controls, fed one way
+                                from my Notion archive so that there is a single source of truth.
+                            </li>
+                        </ul>
+                    </div>
+                    <hr class="hr">
+                    <div class="project-execution">
+                        <h4 class="h4-heading">What Made It Difficult</h4>
+                        <p class="portfolio-paragraph">
+                            The features were the easy part. The real problems were timer state that has to survive a closed
+                            browser tab, three pay periods that align neither with each other nor with a calendar month,
+                            and keeping data honest when it lives in two systems at once. Solving those taught me more about
+                            building software than any tutorial has.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!--Litigation Tracker-->
+            <hr class="hr">
+            <section class="litigation-tracker">
+                <div class="title">
+                    <h2><span class="underline">Litigation Tracker</span></h2>
+                </div>
+                <div class="project-overview">
+                    <h4 class="h4-heading">Project Overview: Case Management for a Law Firm</h4>
+                    <p class="portfolio-paragraph">
+                        A small South African law firm was tracking its entire litigation caseload in a single HTML file.
+                        It ran on one computer, stored everything in that browser, and could only export a basic CSV.
+                        The principal attorney needed something he and a colleague in another location could both read and
+                        update, that would tell them when something changed without flooding their inboxes, and that would
+                        show at a glance how far each matter had progressed and what came next. Because the system holds
+                        privileged client information, security was not optional.
+                    </p>
+                    <h4 class="h4-heading">What I Built</h4>
+                    <p class="portfolio-paragraph">
+                        I designed and delivered a multi user web application to replace it, built with Next.js, TypeScript
+                        and PostgreSQL and deployed on Vercel. The firm handles three kinds of matter, plaintiff, defendant
+                        and general, and each follows its own procedure. Plaintiff matters branch depending on whether the
+                        other side files a notice of intention to defend. I modelled these workflows in a single
+                        configuration file, so the firm's process can change without touching the rest of the code, and each
+                        matter keeps its own copy of its steps, so editing a workflow never rewrites a case's history.
+                    </p>
+                    <ul class="portfolio-ul">
+                        <li>
+                            <strong>Progress at a glance:</strong> a horizontal step tracker, carried over from the tool the
+                            client already liked, working fully on a phone.
+                        </li>
+                        <li>
+                            <strong>Accountability:</strong> a full audit trail of who changed what and when.
+                        </li>
+                        <li>
+                            <strong>Reporting:</strong> filtered PDF and CSV reports, plus a private calendar feed of
+                            upcoming deadlines that subscribes into Outlook or Google Calendar.
+                        </li>
+                        <li>
+                            <strong>Notifications:</strong> a single grouped digest rather than an email per change,
+                            respecting quiet hours and never reporting a user's own edits.
+                        </li>
+                        <li>
+                            <strong>Security:</strong> invite only accounts, passwords hashed with scrypt, sessions held
+                            server side so access can be revoked instantly, rate limited logins and security headers on
+                            every response.
+                        </li>
+                    </ul>
+                    <h4 class="h4-heading">What I Learned</h4>
+                    <p class="portfolio-paragraph">
+                        The hardest part came after the first demo, when the client could not sign in. A full end to end
+                        testing pass turned up problems that had looked fine on the surface. Switching a case between the two
+                        plaintiff routes merged both routes into one nonsensical list. A timezone error made cases due today
+                        read as due tomorrow. The calendar feed broke the iCalendar specification on multi byte characters.
+                        And code pushes had never been deploying at all. Fixing those, and verifying each fix rather than
+                        assuming it worked, taught me more than the initial build did. The system now runs as a live demo
+                        while the firm decides on hosting and a subscription plan.
+                    </p>
+                </div>
+            </section>
+
+
+            <!--Rowing Treasury-->
+            <hr class="hr">
+            <section class="treasury">
+                <div class="title">
+                    <h2><span class="underline">Rowing Treasury</span></h2>
+                </div>
+                <div class="project-overview">
+                    <h4 class="h4-heading">Wits University Boat Club and USSA Rowing</h4>
+                    <p class="portfolio-paragraph">
+                        I have been Treasurer of the Wits University Boat Club since October 2025 and continue in the role
+                        through 2027. From 2027 I also hold the Treasurer seat on the USSA Rowing Executive Committee,
+                        for a term running to 2030. The club carries more than 40 athletes, and I have been accountable
+                        for over R1 million in club funds across this season.
+                    </p>
+                    <ul class="portfolio-ul">
+                        <li>
+                            <strong>Boat Race campaign:</strong> budgeting, setting and collecting athlete contributions, and
+                            reconciling four payment streams across camp, kit, USSA entries and squad racing suits.
+                        </li>
+                        <li>
+                            <strong>Procurement:</strong> equipment quotes and orders through Wits Sport, covering ergometers,
+                            sweep oars, accessories and boat repair.
+                        </li>
+                        <li>
+                            <strong>Governance:</strong> chairing the financial side of formal committee meetings, producing
+                            official minutes and maintaining an action items schedule.
+                        </li>
+                        <li>
+                            <strong>Events and logistics:</strong> a catering brief and full reconciliation for the winter
+                            training camp, a bulk kit order for the squad, and a fundraising quiz night.
+                        </li>
+                    </ul>
+                    <p class="portfolio-paragraph">
+                        This is ordinary accounting done under real conditions: many small payers, incomplete records,
+                        deadlines that do not move, and athletes who deserve a straight answer about exactly what they owe
+                        and why. It has taught me more about controls and communication than any set of lecture notes.
+                    </p>
+                </div>
+            </section>
+
+            <!--Moore Leadership-->
+            <hr class="hr">
+            <section class="moore-leadership">
+                <div class="dark-bg">
+                    <div class="title">
+                        <h2><span class="underline">Moore Leadership Programme</span></h2>
+                    </div>
+                    <div class="project-overview">
+                        <h4 class="h4-heading">Three Years on the Bursary Programme</h4>
+                        <p class="portfolio-paragraph">
+                            Moore Johannesburg runs an annual leadership programme for its bursary students. I have now
+                            attended three, and each one has had a different centre of gravity.
+                        </p>
+                        <ol class="portfolio-ol">
+                            <li>
+                                <strong>2024, foundations.</strong> Personality profiling, negotiation, communication and self
+                                development, with sessions run by the directors of the firm.
+                            </li>
+                            <li>
+                                <strong>2025, the firm itself.</strong> How Moore is structured, what professional development
+                                looks like inside it, and what the first years of articles actually involve.
+                            </li>
+                            <li>
+                                <strong>2026, practice.</strong> Five days running a full simulated audit of a fictional client,
+                                from client acceptance all the way through to presenting our findings to management at the
+                                end of the week.
+                            </li>
+                        </ol>
+                        <p class="portfolio-paragraph">
+                            Three things from the most recent week have stayed with me. Audit rests on trust, and the word
+                            itself goes back to listening. Communication beats almost everything, and there are moments where
+                            you simply pick up the phone instead of sending another email. And you are responsible for what
+                            you consume, because your mind is a context window and you choose what fills it.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!--VAT Project-->
+            <hr class="hr">
+            <section class="vat-project">
+                <div class="title">
+                    <h2><span class="underline">Taxation Project</span></h2>
+                </div>
+                <div class="project-overview">
+                    <h4 class="h4-heading">Project Overview: VAT on a Student Accommodation Development</h4>
+                    <p class="portfolio-paragraph">
+                        A group project analysing the value added tax consequences of a student accommodation development
+                        in Parktown. We worked through the Supreme Court of Appeal decision in Respublica, applied its
+                        reasoning to facts that did not map onto it cleanly, and presented our conclusions as a video
+                        submission.
+                    </p>
+                    <ul class="portfolio-ul">
+                        <li>
+                            <strong>Characterisation:</strong> tested the supply against the commercial accommodation
+                            provisions of the VAT Act rather than assuming the answer.
+                        </li>
+                        <li>
+                            <strong>Case application:</strong> separated what Respublica actually decided from what it is
+                            often said to decide, and reasoned from the former.
+                        </li>
+                        <li>
+                            <strong>Consequences:</strong> set out the input tax position and the practical exposure for
+                            the developer if the characterisation were challenged.
+                        </li>
+                    </ul>
+                </div>
+            </section>
 
             <!--AIS BDO Project-->
             <hr class="hr">
